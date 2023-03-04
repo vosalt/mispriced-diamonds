@@ -1,9 +1,9 @@
-mydata <- read.csv("P2-Mispriced-Diamonds.csv")
+diamond_sales <- read.csv("P2-Mispriced-Diamonds.csv")
 
 library(ggplot2)
 
 ggplot(
-     data = mydata[mydata$carat < 2.5, ],
+     data = diamond_sales[diamond_sales$carat < 2.5, ],
      aes(x = carat, y = price, color = clarity)
 ) +
      geom_point(alpha = 0.1) +
